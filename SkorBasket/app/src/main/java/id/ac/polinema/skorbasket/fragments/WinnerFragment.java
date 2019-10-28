@@ -77,7 +77,7 @@ public class WinnerFragment extends Fragment {
 			public void onChanged(Boolean winner) {
 				if (winner){
 					txtWinner.setText("Home Win");
-				} else{
+				} else {
 					txtWinner.setText("Visitor Win");
 				}
 			}
