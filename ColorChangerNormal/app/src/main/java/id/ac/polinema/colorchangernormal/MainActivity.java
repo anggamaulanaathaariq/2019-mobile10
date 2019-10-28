@@ -24,14 +24,15 @@ public class MainActivity extends AppCompatActivity {
 		rootView = findViewById(R.id.layout_main);
 		btnChangeColor = findViewById(R.id.change_color);
         colorViewModel = ViewModelProviders.of(this).get(ColorViewModel.class);
-		rootView.setBackgroundColor(generateRandomColor());
+//		rootView.setBackgroundColor(generateRandomColor());
+        rootView.setBackgroundColor(colorViewModel.getColor());
 
 		// Tambahkan event klik pada tombol
 		btnChangeColor.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				int color = generateRandomColor();
-                rootView.setBackgroundColor(colorViewModel.getColor());
+                rootView.setBackgroundColor(color);
                 colorViewModel.setColor(color);
 			}
 		});
